@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        style="@style/content_item_white">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/content_item_white">
+
+        <EditText
+            android:id="@+id/gt_account"
+            android:hint="请输入账号"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/black"
+            android:textSize="17sp" >
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/content_item_white">
+
+        <EditText
+            android:id="@+id/gt_password"
+            android:hint="请输入密码"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:inputType="textPassword">
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/content_item_white">
+
+        <EditText
+            android:id="@+id/gt_captcha"
+            android:hint="验证码"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/black"
+            android:textSize="17sp" >
+        </EditText>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="登录"
+            android:background="@color/blue_btn"/>
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="注册" />
+    </LinearLayout>
+
+</LinearLayout>

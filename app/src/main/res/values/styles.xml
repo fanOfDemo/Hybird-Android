@@ -1,0 +1,189 @@
+<resources>
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 以后新增的任何系统组件(View)名都用简写（取单词首字母，SurfaceView简写为sfv）；其它都不简写 -->
+
+    <style name="wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="match_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wrap_match">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="match_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="activity_page">
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/activity_bg</item>
+        <item name="android:orientation">vertical</item>
+        <!-- 状态栏沉浸 <<<<<<<<<<<<<<<<< -->
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <!-- 状态栏沉浸 >>>>>>>>>>>>>>>>> -->
+    </style>
+
+    <!-- topbar <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <style name="topbar_bg">
+        <item name="android:background">@color/topbar_bg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/topbar_height</item>
+    </style>
+
+    <style name="topbar_btn">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/topbar_height</item>
+        <item name="android:minWidth">@dimen/topbar_btn_min_width</item>
+        <item name="android:background">@drawable/to_alpha</item>
+    </style>
+
+    <style name="topbar_left_btn" parent="topbar_btn">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:text"></item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:onClick">onReturnClick</item>
+    </style>
+
+    <style name="topbar_title">
+        <item name="android:id">@id/tvBaseTitle</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="topbar_return_img" parent="topbar_left_btn">
+        <item name="android:src">@drawable/back2</item>
+    </style>
+    <!-- topbar <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+
+    <!-- linearLayout horizontal<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <style name="ll_horizontal_wrap_wrap" parent="wrap_wrap">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_horizontal_match_match" parent="match_match">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_horizontal_wrap_match" parent="wrap_match">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_horizontal_match_wrap" parent="match_wrap">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!-- linearLayout horizontal >>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <!-- linearLayout vertical  <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <style name="ll_vertical_wrap_wrap" parent="wrap_wrap">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_vertical_match_match" parent="match_match">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_vertical_wrap_match" parent="wrap_match">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_vertical_match_wrap" parent="match_wrap">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- linearLayout vertical >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- text <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <style name="text" parent="wrap_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+    <style name="text_micro" parent="text">
+        <item name="android:textSize">@dimen/text_size_micro</item>
+    </style>
+    <!-- text >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <!-- Button <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <style name="img_btn" parent="wrap_wrap">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- Button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <!-- content item <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <style name="content_item">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingLeft">@dimen/content_item_left_tv_padding_left</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/to_alpha</item>
+    </style>
+
+    <style name="content_item_white" parent="content_item">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- content item <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <style name="bottom_tab_ll" parent="ll_vertical_match_match">
+        <item name="android:width">0dp</item>
+    </style>
+
+    <style name="bottom_tab_iv" parent="img_btn"></style>
+
+    <style name="bottom_tab_tv" parent="text">
+        <item name="android:textColor">@color/black_to_white</item>
+    </style>
+
+</resources>

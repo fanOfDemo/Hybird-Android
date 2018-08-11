@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GTApp</string>
+    <string name="app_version">0.0.1</string>
+    <string name="title_activity_main_tab_activity">MainTabActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

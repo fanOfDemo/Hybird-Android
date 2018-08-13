@@ -26,6 +26,14 @@ public class XWalkCrossTabFragment extends BaseFragment{
     private XWalkView xWebView;
     private String url;
 
+    public XWalkView getxWebView() {
+        return xWebView;
+    }
+
+    public void setxWebView(XWalkView xWebView) {
+        this.xWebView = xWebView;
+    }
+
     public String getUrl() {
         return url;
     }
@@ -52,19 +60,8 @@ public class XWalkCrossTabFragment extends BaseFragment{
 
     @Override
     public void initView() {
-        this.xWebView = findView(R.id.x_walk_view);
-        this.xWebView.loadUrl(this.url);
-
-        XWalkSettings mWebSettings = this.xWebView.getSettings();
-        mWebSettings.setSupportZoom(true);//支持缩放
-        mWebSettings.setBuiltInZoomControls(true);//可以任意缩放
-        mWebSettings.setLoadWithOverviewMode(true);
-        mWebSettings.setUseWideViewPort(true);//将图片调整到适合webview的大小
-        mWebSettings.setLoadsImagesAutomatically(true);
-        //调用JS方法.安卓版本大于17,加上注解 @JavascriptInterface
-        mWebSettings.setJavaScriptEnabled(true);//支持JS
-
-        Log.i(TAG, this.url);
+        xWebView = findView(R.id.x_walk_view);
+        xWebView.loadUrl(url);
     }
 
     @Override

@@ -3,12 +3,11 @@ package com.gtfund.gtapp.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import com.gtfund.gtapp.R;
 import com.gtfund.gtapp.common.base.BaseBottomTabActivity;
 import com.gtfund.gtapp.fragment.XWalkCrossTabFragment;
-
-import org.xwalk.core.XWalkView;
 
 /**
  * Created by enzexue on 2018/8/8.
@@ -41,18 +40,19 @@ public class MainTabActivity extends BaseBottomTabActivity{
     }
 
     @Override
-    public void initView() {// 必须调用
+    public void initView() {
         super.initView();
-        exitAnim = R.anim.bottom_push_out;
 
         fragmentTabMain = XWalkCrossTabFragment.createInstance("https://m.gtfund.com/vue/index.html#/");
         fragmentTabFunds = XWalkCrossTabFragment.createInstance("https://m.gtfund.com/vue/index.html#/jijin");
         fragmentTabMy = XWalkCrossTabFragment.createInstance("https://m.gtfund.com/vue/index.html#/user");
+
+        fragments = new Fragment[]{fragmentTabMain, fragmentTabFunds, fragmentTabMy};
     }
 
     @Override
     public void initData() {// 必须调用
-        super.initData();
+        //super.initData();
     }
 
     @Override
@@ -86,10 +86,19 @@ public class MainTabActivity extends BaseBottomTabActivity{
     protected Fragment getFragment(int position) {
         switch (position) {
             case 0:
+                fragmentTabMain.getxWebView().setVisibility(View.VISIBLE);
+                fragmentTabFunds.getxWebView().setVisibility(View.INVISIBLE);
+                fragmentTabMy.getxWebView().setVisibility(View.INVISIBLE);
                 return fragmentTabMain;
             case 1:
+                fragmentTabMain.getxWebView().setVisibility(View.INVISIBLE);
+                fragmentTabFunds.getxWebView().setVisibility(View.VISIBLE);
+                fragmentTabMy.getxWebView().setVisibility(View.INVISIBLE);
                 return fragmentTabFunds;
             case 2:
+                fragmentTabMain.getxWebView().setVisibility(View.INVISIBLE);
+                fragmentTabFunds.getxWebView().setVisibility(View.INVISIBLE);
+                fragmentTabMy.getxWebView().setVisibility(View.VISIBLE);
                 return fragmentTabMy;
             default:
                 return fragmentTabMain;

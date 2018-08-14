@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/activity_page">
 
     <RelativeLayout
         android:id="@+id/rlBottomTabTopbar"
-        style="@style/topbar_bg" >
+        style="@style/topbar_bg">
 
         <TextView
             style="@style/topbar_title"
@@ -15,54 +14,61 @@
             android:text="Tab" />
     </RelativeLayout>
 
-    <FrameLayout
+    <android.support.v4.view.ViewPager
         android:id="@+id/frame_main_tab_container"
         style="@style/match_match"
-        android:layout_weight="1" >
-    </FrameLayout>
+        android:layout_weight="1" />
 
-    <LinearLayout
-        style="@style/ll_horizontal_match_wrap"
-        android:layout_height="@dimen/topbar_height"
-        android:background="@color/alpha_6" >
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:tabIndicatorColor="@color/transparent"
+        app:tabIndicatorHeight="0dp"
 
-        <LinearLayout
-            android:id="@+id/tab_main"
-            style="@style/bottom_tab_ll"
-            android:layout_weight="1"
-            android:gravity="center">
+        />
+    <!--<LinearLayout-->
+    <!--style="@style/ll_horizontal_match_wrap"-->
+    <!--android:layout_height="@dimen/topbar_height"-->
+    <!--android:background="@color/alpha_6" >-->
 
-            <TextView
-                android:id="@+id/tvBottomTabTab0"
-                style="@style/bottom_tab_tv"
-                android:text="主页" />
-        </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:id="@+id/tab_main"-->
+    <!--style="@style/bottom_tab_ll"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center">-->
 
-        <LinearLayout
-            android:id="@+id/tab_funds"
-            style="@style/bottom_tab_ll"
-            android:layout_weight="1"
-            android:gravity="center">
+    <!--<TextView-->
+    <!--android:id="@+id/tvBottomTabTab0"-->
+    <!--style="@style/bottom_tab_tv"-->
+    <!--android:text="主页" />-->
+    <!--</LinearLayout>-->
 
-            <TextView
-                android:id="@+id/tvBottomTabTab1"
-                style="@style/bottom_tab_tv"
-                android:text="基金" />
-        </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:id="@+id/tab_funds"-->
+    <!--style="@style/bottom_tab_ll"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center">-->
 
-        <LinearLayout
-            android:id="@+id/tab_my"
-            style="@style/bottom_tab_ll"
-            android:layout_weight="1"
-            android:gravity="center">
+    <!--<TextView-->
+    <!--android:id="@+id/tvBottomTabTab1"-->
+    <!--style="@style/bottom_tab_tv"-->
+    <!--android:text="基金" />-->
+    <!--</LinearLayout>-->
 
-            <TextView
-                android:id="@+id/tvBottomTabTab2"
-                style="@style/bottom_tab_tv"
-                android:text="资产" />
-        </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:id="@+id/tab_my"-->
+    <!--style="@style/bottom_tab_ll"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center">-->
 
-    </LinearLayout>
+    <!--<TextView-->
+    <!--android:id="@+id/tvBottomTabTab2"-->
+    <!--style="@style/bottom_tab_tv"-->
+    <!--android:text="资产" />-->
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
 
 </LinearLayout>
 

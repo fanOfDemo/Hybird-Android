@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -40,7 +41,7 @@ import com.gtfund.gtapp.R;
  * onFling内控制左右滑动手势操作范围，可自定义
  * Created by enzexue on 2018/8/7.
  */
-public abstract class BaseActivity extends FragmentActivity implements ActivityPresenter, GestureDetector.OnGestureListener {
+public abstract class BaseActivity extends AppCompatActivity implements ActivityPresenter, GestureDetector.OnGestureListener {
     private static final String TAG = "BaseActivity";
 
     /**
